@@ -15,6 +15,11 @@ columnar-format/
 ├── LICENSE
 ├── README.md
 ├── SPEC.md
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── SPEC.md
 ├── contracts/
 │   └── MyToken.sol
 ├── data/
@@ -38,7 +43,6 @@ columnar-format/
 │   ├── selective_read_bench.py
 │   └── string_offsets_check.py
 └── .pytest_cache/
-
 
 
 ---
@@ -74,6 +78,7 @@ columnar-format/
 ```bash
 python -m src.cli csv_to_custom data/sample.csv data/sample.ccol
 
+
 Convert CCOL → CSV
 python -m src.cli custom_to_csv data/sample.ccol data/output.csv
 
@@ -81,17 +86,23 @@ Run Tests
 python -m pytest -v
 
 📌 Notes
-. Schema must match CSV headers exactly (e.g., id,price,name).
-. Tested with Python 3.11.
-. Includes both round‑trip validation and performance benchmarks.
-. Screenshots are embedded for proof of each step.
-. Git proof screenshot confirms clean commit and push.
+- Schema must match CSV headers exactly (e.g., id,price,name).
+- Tested with Python 3.11.
+- Includes both round‑trip validation and performance benchmarks.
+- Screenshots are embedded for proof of each step.
+- Git proof screenshot confirms clean commit and push.
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
 
 ✅ Submission Ready
-. This repository demonstrates:
-. Clean project organization
-. Working writer, reader, and CLI
-. Verified tests with pytest
-. Professional documentation with screenshots
-. Git commit & push proof for submission
+- This repository demonstrates:
+- Clean project organization
+- Working writer, reader, and CLI
+- Verified tests with pytest
+- Professional documentation with screenshots
+- Git commit & push proof for submission
 
