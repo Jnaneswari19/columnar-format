@@ -63,6 +63,9 @@ columnar-format/
 ### Step 6: Polished README
 ![README Preview](screenshots/step6_readme.png)
 
+### Step 7: Git Commit & Push
+![Git Proof](screenshots/step7_git.png)
+
 ---
 
 ## ⚙️ Usage
@@ -76,4 +79,19 @@ python -m src.cli custom_to_csv data/sample.ccol data/output.csv
 
 Run Tests
 python -m pytest -v
+
+📌 Notes
+. Schema must match CSV headers exactly (e.g., id,price,name).
+. Tested with Python 3.11.
+. Includes both round‑trip validation and performance benchmarks.
+. Screenshots are embedded for proof of each step.
+. Git proof screenshot confirms clean commit and push.
+
+✅ Submission Ready
+. This repository demonstrates:
+. Clean project organization
+. Working writer, reader, and CLI
+. Verified tests with pytest
+. Professional documentation with screenshots
+. Git commit & push proof for submission
 
