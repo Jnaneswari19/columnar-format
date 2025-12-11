@@ -89,16 +89,22 @@ python -m pytest -v
 
 The following table compares **CSV parsing** vs **CCOL selective reads**:
 
-| Test Case                        | CSV Time (ms) | CCOL Time (ms) | Speedup |
-|----------------------------------|---------------|----------------|---------|
-| Round‑trip (CSV → CCOL → CSV)   | 120           | 95             | 1.26×   |
-| Selective Read (1 column, 2 rows) | 35            | 12             | 2.92×   |
-| Full Read (2 rows, 3 columns)    | 40            | 18             | 2.22×   |
-| String Column Read (names only) | 45            | 15             | 3.00×   |
+| Test Case                        | CSV Time (s) | CCOL Time (s) | Speedup |
+|----------------------------------|--------------|---------------|---------|
+| Selective Read (sample dataset)  | 0.0009       | 0.0000        | ~∞ (near‑instant) |
 
 📸 Screenshot proof:  
 ![Benchmark Output](screenshots/step5_tests.png)
 
+## 📑 Selective Read Proof
+
+The CCOL format supports efficient selective column reads.  
+Example benchmark output:
+
+✅ Selective read test passed
+
+📸 Screenshot proof:  
+![Selective Read Output](screenshots/step5_selective.png)
 
 
 📌 Notes
@@ -122,3 +128,15 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 - Professional documentation with screenshots
 - Git commit & push proof for submission
 
+## ✅ Final Submission Checklist
+
+- Repo link: [Jnaneswari19/columnar-format](https://github.com/Jnaneswari19/columnar-format)
+- All steps documented with screenshots (setup → writer → reader → CLI → tests → benchmarks → selective read → git push).
+- Benchmarks included with table + screenshot.
+- Selective read proof included.
+- SPEC.md documents binary format clearly.
+- LICENSE file present (MIT).
+- Repo pushed cleanly (`git status` shows clean tree, `git log` shows final commit).
+
+📸 Git proof:  
+![Git Proof](screenshots/step7_git.png)
