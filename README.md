@@ -1,0 +1,79 @@
+# Columnar Format Project (CCOL)
+
+This project implements a custom columnar file format (**CCOL**) with:
+- **Writer**: Converts CSV → CCOL
+- **Reader**: Converts CCOL → dictionary
+- **CLI**: Command‑line interface for conversions
+- **Tests**: Round‑trip and performance validation
+
+---
+
+## 📂 Project Structure
+columnar-format/
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── SPEC.md
+├── contracts/
+│   └── MyToken.sol
+├── data/
+│   ├── sample.csv
+│   └── sample.ccol
+├── screenshots/
+│   ├── step1_setup.png
+│   ├── step2_writer.png
+│   ├── step3_reader.png
+│   ├── step4_cli.png
+│   └── step5_tests.png
+├── src/
+│   ├── __init__.py
+│   ├── ccol_types.py
+│   ├── cli.py
+│   ├── reader.py
+│   └── writer.py
+├── tests/
+│   ├── test_roundtrip.py
+│   ├── test_performance.py
+│   ├── selective_read_bench.py
+│   └── string_offsets_check.py
+└── .pytest_cache/
+
+
+
+---
+
+## 🚀 Steps & Proof
+
+### Step 1: Project Setup
+![Setup](screenshots/step1_setup.png)
+
+### Step 2: Writer Implementation
+![Writer Output](screenshots/step2_writer.png)
+
+### Step 3: Reader Implementation
+![Reader Output](screenshots/step3_reader.png)
+
+### Step 4: CLI Usage
+![CLI Output](screenshots/step4_cli.png)
+
+### Step 5: Tests
+![Tests Output](screenshots/step5_tests.png)
+
+### Step 6: Polished README
+![README Preview](screenshots/step6_readme.png)
+
+---
+
+## ⚙️ Usage
+
+### Convert CSV → CCOL
+```bash
+python -m src.cli csv_to_custom data/sample.csv data/sample.ccol
+
+Convert CCOL → CSV
+python -m src.cli custom_to_csv data/sample.ccol data/output.csv
+
+Run Tests
+python -m pytest -v
+
